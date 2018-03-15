@@ -1,0 +1,22 @@
+<launch>
+
+<!--node: 	declares it is a node
+	pkg:	package name
+	type:	node type; requires corresponding executable
+	name: 	node name
+	output:	send stdout to this loccation
+	required: if true, kill entire roslaunch if node dies        -->	
+
+	<node pkg= "wgs_conversions" type="wgs_conversions_server" name="wgs_conversions_server" output="screen" required="true" />
+
+	<node pkg= "grade_estimation" type="grade_estimation_node.py" name="grade_estimation_node" output="screen" required="true">
+
+		<param name = "queue_size" value="100"/>
+
+		<param name = "gps_topic" value="/novatel_node/odom"/>
+
+		<!--param name = "" value=""/-->
+
+	</node>
+
+</launch>
