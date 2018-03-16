@@ -46,7 +46,7 @@
   <buildtool_depend>catkin</buildtool_depend>
 
   <depend>rospy</depend>
-  <build_export_depend>rospy</build_export_depend> <!-- Do we need this??? -->
+  <!--build_export_depend>rospy</build_export_depend> <! Do we need this??? -->
   <depend>cacc_msgs</depend>
   <depend>nav_msgs</depend>
   <depend>wgs_conversions</depend>
